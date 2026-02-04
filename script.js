@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Animate elements on scroll
+    // Animate elements on scroll with fade-in from sides
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -39,18 +39,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('animate');
             }
         });
     }, observerOptions);
 
-    // Apply animation to sections
-    document.querySelectorAll('section').forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
+    // Apply fade-in-left animation to odd sections and elements
+    document.querySelectorAll('section:nth-child(odd), .about-section:nth-child(odd), .sdg-item:nth-child(odd), .team-member:nth-child(odd)').forEach(element => {
+        element.classList.add('fade-in-left');
+        observer.observe(element);
+    });
+
+    // Apply fade-in-right animation to even sections and elements
+    document.querySelectorAll('section:nth-child(even), .about-section:nth-child(even), .sdg-item:nth-child(even), .team-member:nth-child(even)').forEach(element => {
+        element.classList.add('fade-in-right');
+        observer.observe(element);
+    });
+
+    // Special handling for gallery items
+    document.querySelectorAll('.gallery img, .agri-item').forEach((item, index) => {
+        if (index % 2 === 0) {
+            item.classList.add('fade-in-left');
+        } else {
+            item.classList.add('fade-in-right');
+        }
+        observer.observe(item);
     });
 
     // Animate stat cards with delay
@@ -152,5 +165,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    console.log("Voicing for the Boychild: Modern, lively website initialized.");
+    // Handle lazy loading for images
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    lazyImages.forEach(img => {
+        img.addEventListener('load', () => {
+            img.classList.add('loaded');
+        });
+        // Fallback for browsers that don't support lazy loading
+        if ('loading' in HTMLImageElement.prototype === false) {
+            img.src = img.src;
+        }
+    });
+
+    console.log("Boyhood Echo Initiative: Modern, lively website initialized.");
 });
