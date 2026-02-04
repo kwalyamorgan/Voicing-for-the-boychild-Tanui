@@ -291,6 +291,117 @@ section:hover {
     margin: 0;
 }
 
+/* Tanui Profile Section */
+#tanui-profile {
+    background: linear-gradient(135deg, #fef5e7 0%, #fdeaa7 100%);
+    padding: 4rem 1.5rem;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+}
+
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.profile-text {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+}
+
+.profile-text h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.profile-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.profile-text p strong {
+    color: var(--primary-color);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.profile-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: var(--shadow-lg);
+    border: 4px solid var(--accent-color);
+}
+
+.profile-quote {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    border-left: 4px solid var(--primary-color);
+    text-align: center;
+}
+
+.profile-quote blockquote {
+    font-style: italic;
+    color: var(--text-color);
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.profile-quote cite {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design for Profile Section */
+@media (max-width: 768px) {
+    .profile-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .profile-text {
+        padding: 2rem;
+    }
+
+    .profile-image img {
+        max-width: 250px;
+    }
+
+    .profile-quote {
+        padding: 1.5rem;
+    }
+}
+
 h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
