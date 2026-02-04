@@ -69,10 +69,22 @@ header {
     gap: 2rem;
     margin: 0;
     padding: 0;
+    position: fixed;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 40px);
+    background: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease;
+    box-shadow: var(--shadow);
 }
 
 .nav-menu.active {
     display: flex;
+    left: 0;
 }
 
 .nav-menu li a {
@@ -1322,24 +1334,6 @@ footer {
 
 /* Mobile Menu */
 @media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 100%;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 40px);
-        background: white;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: left 0.3s ease;
-        box-shadow: var(--shadow);
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
     .hamburger.active span:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
@@ -1374,21 +1368,7 @@ footer {
 /* Tablet and Desktop Adjustments */
 @media (min-width: 768px) {
     main {
-        padding: 2rem;
-    }
-
-    .nav-menu.active {
-        display: flex;
-        position: fixed;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 40px);
-        background: white;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        box-shadow: var(--shadow);
+        padding: 3rem 2rem 4rem;
     }
 
     .stat-card {
