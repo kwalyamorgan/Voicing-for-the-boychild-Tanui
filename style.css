@@ -68,18 +68,20 @@ header {
     display: none;
     gap: 2rem;
     margin: 0;
-    padding: 0;
+    padding: 4rem 2rem 2rem;
     position: fixed;
-    top: 100%;
+    top: 60px;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 40px);
+    height: calc(100vh - 60px);
     background: white;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     transition: left 0.3s ease;
     box-shadow: var(--shadow);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .nav-menu.active {
@@ -119,6 +121,18 @@ header {
     margin: 2px 0;
     transition: 0.3s;
     border-radius: 1px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 #hero {
@@ -815,7 +829,7 @@ h2 {
     color: var(--text-color);
     line-height: 1.7;
     margin-bottom: 1.5rem;
-    text-align: justify;
+    text-align: center;
 }
 
 #intro p:last-child {
@@ -1407,6 +1421,60 @@ footer {
     align-self: flex-start;
 }
 
+/* Programs Section */
+#programs {
+    background: var(--bg-color);
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.program-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.program-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.program-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.program-card li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.program-card li:last-child {
+    border-bottom: none;
+}
+
+#programs .btn {
+    display: block;
+    margin: 2rem auto 0;
+    width: fit-content;
+}
+
 .footer-links {
     display: flex;
     gap: 2rem;
@@ -1423,20 +1491,6 @@ footer {
     color: var(--accent-color);
 }
 
-/* Mobile Menu */
-@media (max-width: 768px) {
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-
     #hero h1 {
         font-size: 2rem;
     }
@@ -1447,8 +1501,6 @@ footer {
 
     .map-container iframe {
         height: 300px;
-    }
-
     }
 
     .footer-links {
@@ -1989,8 +2041,6 @@ img[loading="lazy"].loaded {
     }
 }
 
-/* Mobile responsiveness for title section */
-@media (max-width: 768px) {
     .primary-title {
         font-size: 2.5rem;
     }
@@ -2007,7 +2057,6 @@ img[loading="lazy"].loaded {
         padding: 4rem 1rem;
         min-height: 50vh;
     }
-}
 
 /* Staggered Reveal Animation */
 @keyframes revealUp {
@@ -2102,12 +2151,15 @@ img[loading="lazy"].loaded {
     }
 
     .nav-menu {
-        gap: 3rem;
+        width: 300px; /* Sidebar width for desktop */
+        left: -300px; /* Hide off-screen */
+        top: 60px; /* Start below header */
+        height: calc(100vh - 60px); /* Full height minus header */
+        padding: 2rem 1rem; /* Adjust padding for sidebar */
     }
 
-    .nav-menu li a {
-        font-size: 1.1rem;
-        padding: 0.75rem 0;
+    .nav-menu.active {
+        left: 0; /* Show sidebar */
     }
 
     main {
@@ -2202,5 +2254,156 @@ img[loading="lazy"].loaded {
         max-width: 1400px;
         margin: 0 auto;
         padding: 2rem 3rem;
+    }
+}
+
+/* Projects Page Styles */
+#title-page {
+    padding: 120px 2rem 4rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+}
+
+.title-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.project-details {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.project-details h2, .project-details h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.project-details ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.project-details li {
+    margin-bottom: 0.5rem;
+}
+
+main section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+main section h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+main section h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+}
+
+main section h4 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin: 1.5rem 0 1rem;
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+th {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+tr:nth-child(even) {
+    background: rgba(49, 130, 206, 0.05);
+}
+
+tr:hover td {
+    background: rgba(49, 130, 206, 0.1);
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.photo-gallery figure {
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.photo-gallery figure:hover {
+    transform: scale(1.05);
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-gallery figcaption {
+    padding: 1rem;
+    background: var(--card-bg);
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .photo-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    #title-page {
+        padding: 120px 2rem 4rem;
+    }
+
+    .title-container h1 {
+        font-size: 2.5rem;
+    }
+
+    main section {
+        padding: 4rem 2rem;
     }
 }
