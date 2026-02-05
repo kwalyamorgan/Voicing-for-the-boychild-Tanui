@@ -19,6 +19,11 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -139,7 +144,7 @@ header {
     background: linear-gradient(135deg, rgba(26, 54, 93, 0.8) 0%, rgba(49, 130, 206, 0.8) 100%), url('hero.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     color: white;
     padding: 8rem 1rem 6rem;
     text-align: center;
@@ -2259,18 +2264,6 @@ img[loading="lazy"].loaded {
 
     .logo h1 {
         font-size: 1.5rem;
-    }
-
-    .nav-menu {
-        width: 300px; /* Sidebar width for desktop */
-        left: -300px; /* Hide off-screen */
-        top: 60px; /* Start below header */
-        height: calc(100vh - 60px); /* Full height minus header */
-        padding: 2rem 1rem; /* Adjust padding for sidebar */
-    }
-
-    .nav-menu.active {
-        left: 0; /* Show sidebar */
     }
 
     main {
