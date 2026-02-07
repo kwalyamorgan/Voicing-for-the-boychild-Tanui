@@ -30,55 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Animate elements on scroll with fade-in from sides
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-            }
-        });
-    }, observerOptions);
-
-    // Apply fade-in-left animation to odd sections and elements
-    document.querySelectorAll('section:nth-child(odd), .about-section:nth-child(odd), .sdg-item:nth-child(odd), .team-member:nth-child(odd)').forEach(element => {
-        element.classList.add('fade-in-left');
-        observer.observe(element);
-    });
-
-    // Apply fade-in-right animation to even sections and elements
-    document.querySelectorAll('section:nth-child(even), .about-section:nth-child(even), .sdg-item:nth-child(even), .team-member:nth-child(even)').forEach(element => {
-        element.classList.add('fade-in-right');
-        observer.observe(element);
-    });
-
-    // Special handling for gallery items
-    document.querySelectorAll('.gallery img, .agri-item').forEach((item, index) => {
-        if (index % 2 === 0) {
-            item.classList.add('fade-in-left');
-        } else {
-            item.classList.add('fade-in-right');
-        }
-        observer.observe(item);
-    });
-
-    // Animate stat cards with delay
-    const cards = document.querySelectorAll('.stat-card');
-    cards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'all 0.6s ease-out';
-        
-        setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }, index * 200);
-    });
-
     // Animate numbers counting up
     function animateNumbers() {
         const statNumbers = document.querySelectorAll('.stat-card h3');
