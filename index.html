@@ -3,44 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boyhood Echo Organisation</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Boyhood Echo</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="container">
+        <nav>
             <div class="logo">
-                <h1>Boyhood Echo Organisation</h1>
+                <h1>Boyhood Echo</h1>
             </div>
-            <nav>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="donate.html">Donate</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="impacts.html">Impact</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="programs.html">Program</a></li>
-                </ul>
-            </nav>
-        </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="impacts.html">Impact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="programs.html">Program</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <section id="hero">
-            <h1>Boyhood Echo Organisation</h1>
-            <p>Saving the Boy Child to Secure the Future of the Girl Child and the Community</p>
+            <div class="hero-content">
+                <h1>Boyhood Echo</h1>
+                <p>Saving the Boy Child to Secure the Future of the Girl Child and the Community</p>
+                <a href="donate.html" class="btn">Donate Now</a>
+            </div>
         </section>
 
         <section id="intro">
@@ -52,26 +53,91 @@
 
         <section id="about">
             <h2>About Us</h2>
+            <p id="about-intro">Empowering the boy child to create balanced communities and sustainable futures</p>
+
             <div class="about-content">
                 <div class="about-section">
+                    <div class="about-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H5C3.89 1 3 1.89 3 3V21C3 22.11 3.89 23 5 23H19C20.11 23 21 22.11 21 21V9M19 9H14V4H19V9Z" fill="#0088aa"/>
+                        </svg>
+                    </div>
                     <h3>Who We Are</h3>
-                    <p>Boyhood Echo Organisation is a youth-led Organisation facilitated by a team of committed individuals. The organization aims to empower the youth through sustainable initiatives.</p>
+                    <p>A youth-led organization committed to empowering boys and young men in marginalized communities. We believe that sustainable development requires addressing the needs of all youth, creating balanced and thriving communities.</p>
                 </div>
+
                 <div class="about-section">
-                    <h3>Vision</h3>
-                    <p>A balanced and empowered society where boys and girls are equally educated, responsible, and equipped to build strong families and communities.</p>
+                    <div class="about-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C13.66 2 15 3.34 15 5C15 6.66 13.66 8 12 8C10.34 8 9 6.66 9 5C9 3.34 10.34 2 12 2ZM21 9V7L15 1H5C3.89 1 3 1.89 3 3V21C3 22.11 3.89 23 5 23H19C20.11 23 21 22.11 21 21V9M19 9H14V4H19V9Z" fill="#0088aa"/>
+                            <path d="M8 12H16V14H8V12ZM8 16H16V18H8V16Z" fill="#0088aa"/>
+                        </svg>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>A balanced and empowered society where boys and girls are equally educated, responsible, and equipped to build strong families and communities. We envision a future where every young person has the opportunity to thrive.</p>
                 </div>
+
                 <div class="about-section">
-                    <h3>Mission</h3>
-                    <p>To support, mentor, educate, and guide the boy child in marginalized communities of Northern Kenya, fostering responsible masculinity that strengthens education outcomes and community development.</p>
+                    <div class="about-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L13.09 8.26L19 9L13.09 9.74L12 16L10.91 9.74L5 9L10.91 8.26L12 2Z" fill="#0088aa"/>
+                            <path d="M3 21V19H21V21H3Z" fill="#0088aa"/>
+                        </svg>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To support, mentor, educate, and guide the boy child in marginalized communities of Northern Kenya. We foster responsible masculinity that strengthens education outcomes, promotes gender equality, and drives community development.</p>
+                </div>
+            </div>
+
+            <div class="about-stats">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Boys Empowered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Communities Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years of Impact</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-transition-section">
+            <div class="hero-carousel">
+                <div class="carousel-track">
+                    <!-- Set 1 -->
+                    <div class="carousel-item" style="background-image:url('images/1.jpeg')"></div>
+                    <div class="carousel-item" style="background-image:url('images/2.jpeg')"></div>
+                    <div class="carousel-item" style="background-image:url('images/3.jpeg')"></div>
+                    <div class="carousel-item" style="background-image:url('images/4.jpeg')"></div>
+                    <div class="carousel-item" style="background-image:url('images/5.jpeg')"></div>
+                    <div class="carousel-item" style="background-image:url('images/6.jpeg')"></div>
+                    <div class="carousel-item" style="background-image:url('images/7.jpeg')"></div>
+
+                    <!-- Set 2 (duplicate for seamless loop) -->
+                    <div class="carousel-item" style="background-image:url('images/1.jpeg')"></div>
+                    <div class="carousel-item" style="background-image:url('images/2.jpeg')"></div>
+                    <div class="carousel-item" style="background-image:url('images/3.jpeg')"></div>
+                    <div class="carousel-item" style="background-image:url('images/4.jpeg')"></div>
+                    <div class="carousel-item" style="background-image:url('images/5.jpeg')"></div>
+                    <div class="carousel-item" style="background-image:url('images/6.jpeg')"></div>
+                    <div class="carousel-item" style="background-image:url('images/7.jpeg')"></div>
                 </div>
             </div>
         </section>
 
         <section id="flagship">
-            <h2>Our Flagship Project</h2>
-            <p>Mastercard-funded garlic farming initiative empowering youth in Maramoja Village. This sustainable project generates income to support boy child education and community development.</p>
-            <a href="projects.html" class="btn">Explore our projects</a>
+            <div class="flagship-content">
+                <h2>Our Flagship Project</h2>
+                <p>Mastercard-funded garlic farming initiative empowering youth in Maramoja Village. This sustainable project generates income to support boy child education and community development.</p>
+                <a href="projects.html" class="btn">Explore our projects</a>
+            </div>
+            <div class="flagship-image">
+                <img src="images/4.jpeg" alt="Garlic Farming Project" loading="lazy">
+            </div>
         </section>
 
         <section id="highlights">
@@ -126,15 +192,11 @@
                     <p>Boys Educated</p>
                 </div>
                 <div class="stat-item">
-                    <h3>50+</h3>
-                    <p>Families Supported</p>
+                    <h3>10+</h3>
+                    <p>Communities Served</p>
                 </div>
                 <div class="stat-item">
-                    <h3>10</h3>
-                    <p>Communities Reached</p>
-                </div>
-                <div class="stat-item">
-                    <h3>5</h3>
+                    <h3>5+</h3>
                     <p>Years of Impact</p>
                 </div>
             </div>
@@ -148,11 +210,26 @@
                 <textarea name="body" rows="6" placeholder="Please tell us about your organization, how you heard about us, and how you would like to partner with us. Include any relevant contact information." required></textarea>
                 <button type="submit" class="btn">Apply to Partner</button>
             </form>
+
+            <div class="logo-carousel partners-carousel">
+                <h3>Our Partners &amp; Supporters</h3>
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="logo-item"><img src="images/mcf.jpg" alt="Partner 1" onerror="this.style.display='none'"></div>
+                        <div class="logo-item"><img src="images/mcfsp.jpg" alt="Partner 2" onerror="this.style.display='none'"></div>
+                        <div class="logo-item"><img src="images/usiu.jpg" alt="Partner 3" onerror="this.style.display='none'"></div>
+                        <div class="logo-item"><img src="images/mcf.jpg" alt="Partner 1" onerror="this.style.display='none'"></div>
+                        <div class="logo-item"><img src="images/mcfsp.jpg" alt="Partner 2" onerror="this.style.display='none'"></div>
+                        <div class="logo-item"><img src="images/usiu.jpg" alt="Partner 3" onerror="this.style.display='none'"></div>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
 
     <footer>
+
         <div class="footer-content">
             <p>&copy; 2026 Boyhood Echo Organisation. All rights reserved.</p>
             <div class="footer-links">
