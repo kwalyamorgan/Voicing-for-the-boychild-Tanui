@@ -1,0 +1,77 @@
+#team,
+#tanui-profile {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+#team .team-container {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+#team .team-member {
+    border: 1px solid #e3ecdd;
+    border-radius: 14px;
+    background: #fbfef8;
+    padding: 1rem;
+    text-align: center;
+}
+
+#team .team-member img {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto 0.8rem;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+#tanui-profile .profile-content {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 1fr;
+}
+
+#tanui-profile .profile-text p + p {
+    margin-top: 0.8rem;
+}
+
+#tanui-profile .profile-image img {
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid #dfebda;
+}
+
+#tanui-profile .profile-quote {
+    margin-top: 0.8rem;
+    border-left: 4px solid var(--brand);
+    padding: 0.6rem 0.9rem;
+    background: #f6fdf6;
+    border-radius: 10px;
+}
+
+#tanui-profile cite {
+    display: block;
+    margin-top: 0.4rem;
+    color: var(--brand-deep);
+    font-style: normal;
+    font-weight: 600;
+}
+
+@media (min-width: 960px) {
+    #tanui-profile .profile-content {
+        grid-template-columns: 1.25fr 0.9fr;
+        align-items: start;
+    }
+}
+
+@media (max-width: 640px) {
+    #team,
+    #tanui-profile {
+        padding: 1.25rem;
+    }
+}

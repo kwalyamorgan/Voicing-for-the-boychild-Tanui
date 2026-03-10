@@ -1,0 +1,32 @@
+#gallery {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+#gallery .gallery {
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.9rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+#gallery .gallery img {
+    border-radius: 14px;
+    border: 1px solid #e3ecdd;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+#gallery .gallery img:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: var(--shadow-soft);
+}
+
+@media (max-width: 640px) {
+    #gallery {
+        padding: 1.25rem;
+    }
+}

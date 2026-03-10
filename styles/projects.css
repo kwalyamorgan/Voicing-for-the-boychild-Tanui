@@ -1,0 +1,93 @@
+#title-page,
+#executive-summary,
+#project-background,
+#funding-partners,
+#project-objectives,
+#implementation,
+#outcomes,
+#achievements,
+#recommendations {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+#title-page {
+    background: linear-gradient(145deg, #0f5134, #1c6c47);
+    color: #eff7f2;
+}
+
+#title-page .title-container h1,
+#title-page .project-details h2,
+#title-page .project-details p {
+    color: #eff7f2;
+}
+
+#executive-summary h3,
+#project-background h3,
+#funding-partners h3,
+#project-objectives h3,
+#implementation h3,
+#implementation h4,
+#outcomes h3,
+#recommendations h3 {
+    margin-top: 1rem;
+    color: var(--brand-deep);
+}
+
+#funding-partners ul,
+#project-objectives ul,
+#implementation ul,
+#outcomes ul,
+#achievements ul {
+    margin-top: 0.7rem;
+    margin-left: 1.2rem;
+}
+
+#implementation table {
+    width: 100%;
+    margin-top: 0.9rem;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#implementation th,
+#implementation td {
+    border: 1px solid #dfe9da;
+    padding: 0.7rem;
+    text-align: left;
+}
+
+#implementation thead {
+    background: #edf8ee;
+}
+
+.photo-gallery {
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.photo-gallery img {
+    border-radius: 12px;
+    border: 1px solid #e2ecde;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+@media (max-width: 640px) {
+    #title-page,
+    #executive-summary,
+    #project-background,
+    #funding-partners,
+    #project-objectives,
+    #implementation,
+    #outcomes,
+    #achievements,
+    #recommendations {
+        padding: 1.25rem;
+    }
+}

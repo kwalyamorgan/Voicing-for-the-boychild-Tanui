@@ -1,0 +1,98 @@
+#outcomes-impact,
+#change,
+#stats,
+#testimonials,
+#sustainability,
+#donation,
+#sdg {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+#outcomes-impact ul {
+    margin-top: 0.8rem;
+    margin-left: 1.2rem;
+}
+
+#change table {
+    width: 100%;
+    margin-top: 0.9rem;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+#change th,
+#change td {
+    border: 1px solid #dfe9da;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+#change thead {
+    background: #edf8ee;
+}
+
+#stats {
+    display: grid;
+    gap: 0.8rem;
+}
+
+#stats .stat-card {
+    border: 1px solid #e0ebdb;
+    border-radius: 12px;
+    background: #f8fff5;
+    padding: 1rem;
+    text-align: center;
+}
+
+#stats .stat-card h3 {
+    color: var(--brand-deep);
+    font-size: 2rem;
+}
+
+#testimonials blockquote {
+    max-width: 840px;
+    margin: 0.4rem auto;
+    text-align: center;
+    font-size: 1.05rem;
+}
+
+#testimonials p {
+    text-align: center;
+}
+
+#sdg .sdg-grid {
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.9rem;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+#sdg .sdg-item {
+    border: 1px solid #e1ebdc;
+    background: #fbfef8;
+    border-radius: 14px;
+    padding: 1rem;
+}
+
+#sdg .sdg-item img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    margin-bottom: 0.6rem;
+}
+
+@media (max-width: 640px) {
+    #outcomes-impact,
+    #change,
+    #stats,
+    #testimonials,
+    #sustainability,
+    #donation,
+    #sdg {
+        padding: 1.25rem;
+    }
+}
